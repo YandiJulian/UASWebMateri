@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Materi | Pemrograman Web 1</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="assets/css/img/logo.png" alt="Logo UNPAM">
+    <span>UNIVERSITAS PAMULANG</span>
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">Beranda</a>
+    <a href="index.html#tentang">Tentang</a>
+    <a href="index.html#preview">Preview</a>
+    <a href="index.html#informasi">Informasi</a>
+  </nav>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="detail-card">
+  <h1 id="judul"></h1>
+  <p class="subtitle">Mata Kuliah Pemrograman Web 1</p>
+
+  <div id="kontenMateri"></div>
+
+  <div class="back-wrapper">
+    <a href="materi.html" class="btn-back">← Kembali ke Daftar Materi</a>
+  </div>
+</section>
+
+<script>
+const materi = {
+
+1: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Menjelaskan pengertian World Wide Web (WWW) dan internet.</li>
+    <li>Memahami mekanisme kerja web berbasis client-server.</li>
+    <li>Menjelaskan peran browser dan web server dalam mengakses halaman web.</li>
+    <li>Mengenal HTML sebagai bahasa markup untuk membangun halaman web.</li>
+    <li>Memahami struktur dasar dokumen HTML.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Pengertian World Wide Web (WWW)</h4>
+  <p>
+    World Wide Web (WWW) merupakan kumpulan halaman web yang saling terhubung
+    melalui hyperlink dan dapat diakses melalui jaringan internet menggunakan
+    aplikasi browser. WWW memungkinkan pengguna untuk mengakses berbagai jenis
+    informasi seperti teks, gambar, audio, video, dan animasi secara interaktif.
+  </p>
+  <p>
+    WWW bekerja di atas jaringan internet, namun keduanya memiliki pengertian
+    yang berbeda. Internet adalah infrastruktur jaringan global, sedangkan World
+    Wide Web adalah layanan yang berjalan di atas internet untuk menyajikan
+    informasi dalam bentuk halaman web.
+  </p>
+
+  <h4>2. Konsep Hypertext dan Hypermedia</h4>
+  <p>
+    Hypertext adalah konsep teks yang memiliki tautan (link) ke dokumen atau
+    halaman lain. Dengan hypertext, pengguna dapat berpindah dari satu halaman
+    ke halaman lain hanya dengan mengklik link tertentu.
+  </p>
+  <p>
+    Hypermedia merupakan pengembangan dari hypertext yang tidak hanya
+    menghubungkan teks, tetapi juga elemen multimedia seperti gambar, suara,
+    dan video.
+  </p>
+
+  <h4>3. Cara Kerja Web</h4>
+  <p>
+    World Wide Web bekerja menggunakan konsep <strong>client-server</strong>.
+    Proses kerja web secara umum dapat dijelaskan sebagai berikut:
+  </p>
+  <ol>
+    <li>Pengguna mengetikkan alamat website (URL) pada browser.</li>
+    <li>Browser mengirimkan permintaan (request) ke web server melalui protokol HTTP.</li>
+    <li>Web server memproses permintaan tersebut.</li>
+    <li>Server mengirimkan respon berupa dokumen HTML.</li>
+    <li>Browser menampilkan halaman web ke layar pengguna.</li>
+  </ol>
+
+  <h4>4. Pengertian Web Browser</h4>
+  <p>
+    Web browser adalah aplikasi yang digunakan untuk mengakses dan menampilkan
+    halaman web. Browser bertugas menerjemahkan kode HTML menjadi tampilan visual
+    yang dapat dibaca oleh pengguna.
+  </p>
+  <p>Contoh web browser antara lain Google Chrome, Mozilla Firefox, Microsoft Edge, dan Opera.</p>
+
+  <h4>5. Pengertian Web Server</h4>
+  <p>
+    Web server adalah sistem yang menyimpan dan menyajikan halaman web kepada
+    client (browser). Web server akan merespon permintaan dengan mengirimkan
+    file HTML, CSS, JavaScript, dan media lainnya.
+  </p>
+  <p>Contoh web server yang umum digunakan adalah Apache, Nginx, dan IIS.</p>
+
+  <h4>6. Pengantar HTML</h4>
+  <p>
+    HTML (HyperText Markup Language) adalah bahasa markup yang digunakan untuk
+    menyusun struktur halaman web. HTML menggunakan tag-tag khusus untuk
+    menandai elemen seperti teks, gambar, link, tabel, dan form.
+  </p>
+
+  <h4>7. Struktur Dasar Dokumen HTML</h4>
+  <p>
+    Setiap dokumen HTML memiliki struktur dasar yang wajib ada agar dapat
+    ditampilkan dengan benar oleh browser.
+  </p>
+
+  <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Judul Halaman&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  Konten halaman web
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>
+    Tag <code>&lt;head&gt;</code> berisi informasi halaman, sedangkan
+    <code>&lt;body&gt;</code> berisi konten utama yang ditampilkan ke pengguna.
+  </p>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Rangkuman</h3>
+  <ul>
+    <li>World Wide Web adalah layanan berbasis internet.</li>
+    <li>Web bekerja menggunakan konsep client-server.</li>
+    <li>Browser dan web server saling berinteraksi melalui HTTP.</li>
+    <li>HTML adalah bahasa dasar dalam pembuatan website.</li>
+    <li>Struktur HTML harus ditulis dengan benar dan sistematis.</li>
+  </ul>
+</div>
+
+<div class="content-block highlight">
+  <h3>Catatan</h3>
+  <p>
+    HTML merupakan fondasi utama dalam pengembangan web. Pemahaman HTML yang baik
+    akan memudahkan mahasiswa dalam mempelajari CSS untuk tampilan dan
+    JavaScript untuk interaksi.
+  </p>
+</div>
+`,
+
+2: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Memahami konsep dasar tag dalam HTML.</li>
+    <li>Menggunakan tag HTML dasar untuk membuat struktur halaman web.</li>
+    <li>Membedakan tag berpasangan dan tag tunggal.</li>
+    <li>Menggunakan heading, paragraf, dan pemisah konten dengan benar.</li>
+    <li>Menyusun halaman HTML sederhana menggunakan tag dasar.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Pengertian Tag HTML</h4>
+  <p>
+    Tag HTML adalah perintah atau penanda yang digunakan untuk memberi tahu browser
+    bagaimana suatu konten harus ditampilkan. Tag ditulis menggunakan tanda kurung
+    sudut <code>&lt; &gt;</code> dan biasanya berpasangan antara tag pembuka dan tag penutup.
+  </p>
+
+  <p>
+    Contoh tag HTML:
+  </p>
+
+  <pre class="code-block"><code>&lt;p&gt;Ini adalah paragraf&lt;/p&gt;</code></pre>
+
+  <p>
+    Pada contoh di atas, <code>&lt;p&gt;</code> adalah tag pembuka dan
+    <code>&lt;/p&gt;</code> adalah tag penutup.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>2. Jenis-Jenis Tag HTML</h4>
+
+  <p><strong>a. Tag Berpasangan</strong></p>
+  <p>
+    Tag berpasangan adalah tag yang memiliki pembuka dan penutup.
+    Biasanya digunakan untuk membungkus konten.
+  </p>
+
+  <pre class="code-block"><code>&lt;h1&gt;Judul Halaman&lt;/h1&gt;
+&lt;p&gt;Isi paragraf&lt;/p&gt;</code></pre>
+
+  <p><strong>b. Tag Tunggal (Self Closing Tag)</strong></p>
+  <p>
+    Tag tunggal adalah tag yang tidak memiliki pasangan penutup.
+  </p>
+
+  <pre class="code-block"><code>&lt;br&gt;
+&lt;hr&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>3. Tag Heading</h4>
+  <p>
+    Heading digunakan untuk membuat judul atau subjudul pada halaman web.
+    HTML menyediakan enam tingkat heading, yaitu dari <code>&lt;h1&gt;</code>
+    sampai <code>&lt;h6&gt;</code>.
+  </p>
+
+  <pre class="code-block"><code>&lt;h1&gt;Judul Utama&lt;/h1&gt;
+&lt;h2&gt;Sub Judul&lt;/h2&gt;
+&lt;h3&gt;Judul Bagian&lt;/h3&gt;</code></pre>
+
+  <p>
+    Tag <code>&lt;h1&gt;</code> biasanya digunakan sebagai judul utama halaman,
+    sedangkan <code>&lt;h2&gt;</code> hingga <code>&lt;h6&gt;</code> digunakan
+    sebagai subjudul.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>4. Tag Paragraf</h4>
+  <p>
+    Tag paragraf digunakan untuk menampilkan teks dalam bentuk paragraf.
+    Tag ini secara otomatis memberikan jarak antar paragraf.
+  </p>
+
+  <pre class="code-block"><code>&lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+&lt;p&gt;Ini adalah paragraf kedua.&lt;/p&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>5. Tag Pemisah dan Baris Baru</h4>
+  <p>
+    HTML menyediakan beberapa tag untuk mengatur tata letak teks, antara lain:
+  </p>
+
+  <ul>
+    <li><code>&lt;br&gt;</code> untuk membuat baris baru</li>
+    <li><code>&lt;hr&gt;</code> untuk membuat garis horizontal</li>
+  </ul>
+
+  <pre class="code-block"><code>Paragraf pertama&lt;br&gt;
+Paragraf kedua
+
+&lt;hr&gt;
+
+Konten setelah garis</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>6. Struktur Halaman HTML Sederhana</h4>
+  <p>
+    Dengan menggabungkan tag-tag dasar, kita dapat membuat halaman HTML sederhana
+    seperti berikut:
+  </p>
+
+  <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Halaman HTML Sederhana&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Selamat Datang&lt;/h1&gt;
+  &lt;p&gt;Ini adalah halaman HTML pertama saya.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Catatan Penting</h3>
+  <p>
+    Penguasaan tag HTML dasar sangat penting karena menjadi fondasi dalam
+    pengembangan website. Kesalahan kecil dalam penulisan tag dapat menyebabkan
+    tampilan halaman web menjadi tidak sesuai.
+  </p>
+</div>
+`,
+
+3: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Memahami fungsi tag HTML untuk pemformatan teks.</li>
+    <li>Menggunakan tag format teks seperti tebal, miring, dan garis bawah.</li>
+    <li>Membedakan tag presentasi dan tag semantik.</li>
+    <li>Menggunakan karakter khusus (HTML Entities) dengan benar.</li>
+    <li>Menyusun konten teks yang rapi dan mudah dibaca pada halaman web.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Pengertian Format Teks dalam HTML</h4>
+  <p>
+    Format teks dalam HTML digunakan untuk mengatur tampilan tulisan agar
+    lebih jelas, terstruktur, dan memiliki penekanan tertentu.
+    Pemformatan teks membantu pembaca memahami isi halaman web dengan lebih baik.
+  </p>
+
+  <p>
+    HTML menyediakan berbagai tag untuk mengatur format teks seperti teks tebal,
+    miring, garis bawah, teks kecil, dan teks yang diberi penekanan khusus.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>2. Tag Format Teks Dasar</h4>
+
+  <p><strong>a. Teks Tebal</strong></p>
+  <p>
+    Teks tebal digunakan untuk memberikan penekanan kuat pada suatu kata atau kalimat.
+  </p>
+
+  <pre class="code-block"><code>&lt;b&gt;Teks Tebal&lt;/b&gt;
+&lt;strong&gt;Teks Penting&lt;/strong&gt;</code></pre>
+
+  <p>
+    Tag <code>&lt;strong&gt;</code> bersifat semantik dan menandakan bahwa teks tersebut
+    memiliki makna penting, bukan hanya tampilan visual.
+  </p>
+</div>
+
+<div class="content-block">
+  <p><strong>b. Teks Miring</strong></p>
+  <p>
+    Teks miring biasanya digunakan untuk istilah asing atau penekanan ringan.
+  </p>
+
+  <pre class="code-block"><code>&lt;i&gt;Teks Miring&lt;/i&gt;
+&lt;em&gt;Teks Ditekankan&lt;/em&gt;</code></pre>
+
+  <p>
+    Tag <code>&lt;em&gt;</code> lebih disarankan karena memiliki makna semantik.
+  </p>
+</div>
+
+<div class="content-block">
+  <p><strong>c. Garis Bawah</strong></p>
+  <p>
+    Garis bawah dapat digunakan untuk menandai teks tertentu,
+    namun penggunaannya harus hati-hati karena dapat disalahartikan sebagai hyperlink.
+  </p>
+
+  <pre class="code-block"><code>&lt;u&gt;Teks Bergaris Bawah&lt;/u&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>3. Tag Teks Tambahan</h4>
+
+  <p><strong>a. Teks Kecil</strong></p>
+  <pre class="code-block"><code>&lt;small&gt;Teks kecil&lt;/small&gt;</code></pre>
+
+  <p><strong>b. Teks Dicoret</strong></p>
+  <pre class="code-block"><code>&lt;del&gt;Teks dicoret&lt;/del&gt;</code></pre>
+
+  <p><strong>c. Teks Tanda Masuk</strong></p>
+  <pre class="code-block"><code>&lt;mark&gt;Teks disorot&lt;/mark&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>4. Karakter Khusus (HTML Entities)</h4>
+  <p>
+    Dalam HTML, terdapat beberapa karakter yang tidak dapat ditampilkan secara langsung
+    karena memiliki fungsi khusus. Untuk menampilkannya, digunakan HTML Entities.
+  </p>
+
+  <table class="table">
+    <tr>
+      <th>Karakter</th>
+      <th>Entity</th>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>&amp;lt;</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>&amp;gt;</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>&amp;amp;</td>
+    </tr>
+    <tr>
+      <td>"</td>
+      <td>&amp;quot;</td>
+    </tr>
+  </table>
+
+  <p>
+    Penggunaan HTML Entities sangat penting untuk mencegah kesalahan penulisan kode
+    dan memastikan tampilan teks sesuai dengan yang diinginkan.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>5. Contoh Penerapan Format Teks</h4>
+  <pre class="code-block"><code>&lt;p&gt;
+  &lt;strong&gt;HTML&lt;/strong&gt; adalah bahasa &lt;em&gt;markup&lt;/em&gt;
+  yang digunakan untuk membuat &lt;u&gt;halaman web&lt;/u&gt;.
+&lt;/p&gt;</code></pre>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Catatan Penting</h3>
+  <p>
+    Gunakan tag format teks secara bijak dan semantik.
+    Pemformatan yang berlebihan dapat mengurangi kenyamanan membaca
+    dan mengganggu struktur halaman web.
+  </p>
+</div>
+`,
+
+4: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Memahami fungsi media pada halaman web.</li>
+    <li>Menampilkan gambar menggunakan tag HTML.</li>
+    <li>Menambahkan audio ke dalam halaman web.</li>
+    <li>Menampilkan video menggunakan HTML5.</li>
+    <li>Mengatur atribut media agar tampil optimal di browser.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Penggunaan Media dalam Website</h4>
+  <p>
+    Media seperti gambar, audio, dan video digunakan untuk memperkaya konten
+    halaman web agar lebih informatif, menarik, dan interaktif.
+    Dengan adanya media, pengguna dapat memahami informasi secara visual dan audiovisual.
+  </p>
+  <p>
+    HTML5 menyediakan tag khusus untuk menampilkan media tanpa memerlukan plugin tambahan,
+    sehingga website dapat berjalan dengan baik di berbagai perangkat.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>2. Menampilkan Gambar dengan Tag &lt;img&gt;</h4>
+  <p>
+    Gambar ditampilkan menggunakan tag <code>&lt;img&gt;</code>.
+    Tag ini bersifat self-closing dan tidak memiliki tag penutup.
+  </p>
+
+  <pre class="code-block"><code>&lt;img src="gambar.jpg" alt="Contoh Gambar"&gt;</code></pre>
+
+  <p><strong>Atribut penting pada tag img:</strong></p>
+  <ul>
+    <li><code>src</code> → lokasi file gambar</li>
+    <li><code>alt</code> → teks alternatif jika gambar gagal ditampilkan</li>
+    <li><code>width</code> dan <code>height</code> → mengatur ukuran gambar</li>
+  </ul>
+
+  <pre class="code-block"><code>&lt;img src="logo.png" alt="Logo Website" width="200"&gt;</code></pre>
+
+  <p>
+    Atribut <code>alt</code> sangat penting untuk aksesibilitas dan SEO.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>3. Menampilkan Audio dengan Tag &lt;audio&gt;</h4>
+  <p>
+    HTML5 memungkinkan pemutaran audio secara langsung di browser
+    menggunakan tag <code>&lt;audio&gt;</code>.
+  </p>
+
+  <pre class="code-block"><code>&lt;audio controls&gt;
+  &lt;source src="musik.mp3" type="audio/mpeg"&gt;
+  Browser Anda tidak mendukung audio.
+&lt;/audio&gt;</code></pre>
+
+  <p><strong>Atribut penting pada audio:</strong></p>
+  <ul>
+    <li><code>controls</code> → menampilkan kontrol pemutar</li>
+    <li><code>autoplay</code> → memutar audio otomatis</li>
+    <li><code>loop</code> → memutar audio berulang</li>
+  </ul>
+</div>
+
+<div class="content-block">
+  <h4>4. Menampilkan Video dengan Tag &lt;video&gt;</h4>
+  <p>
+    Video dapat ditampilkan menggunakan tag <code>&lt;video&gt;</code>
+    yang mendukung berbagai format seperti MP4, WebM, dan Ogg.
+  </p>
+
+  <pre class="code-block"><code>&lt;video controls width="400"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Browser Anda tidak mendukung video.
+&lt;/video&gt;</code></pre>
+
+  <p><strong>Atribut penting pada video:</strong></p>
+  <ul>
+    <li><code>controls</code> → menampilkan kontrol video</li>
+    <li><code>width</code> dan <code>height</code> → mengatur ukuran video</li>
+    <li><code>poster</code> → gambar preview sebelum video diputar</li>
+  </ul>
+</div>
+
+<div class="content-block">
+  <h4>5. Menyematkan Video dari Platform Eksternal</h4>
+  <p>
+    Video dari platform seperti YouTube dapat disematkan menggunakan iframe.
+  </p>
+
+  <pre class="code-block"><code>&lt;iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/VIDEO_ID" 
+  frameborder="0" 
+  allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>6. Praktik Sederhana</h4>
+  <p>
+    Buatlah sebuah halaman HTML yang menampilkan:
+  </p>
+  <ol>
+    <li>Satu gambar</li>
+    <li>Satu audio</li>
+    <li>Satu video</li>
+  </ol>
+  <p>
+    Pastikan semua media dapat diputar dengan baik di browser.
+  </p>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Catatan Penting</h3>
+  <p>
+    Gunakan media secara proporsional agar website tetap ringan dan cepat diakses.
+    Media berukuran besar dapat memperlambat waktu loading halaman web.
+  </p>
+</div>
+`,
+
+5: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Memahami pengertian dan fungsi hyperlink.</li>
+    <li>Menggunakan tag anchor (&lt;a&gt;) untuk membuat tautan.</li>
+    <li>Membuat link menuju halaman lain dalam satu website.</li>
+    <li>Membuat hyperlink menuju website eksternal.</li>
+    <li>Menggunakan anchor untuk navigasi dalam satu halaman.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Pengertian Hyperlink</h4>
+  <p>
+    Hyperlink adalah elemen pada halaman web yang berfungsi sebagai penghubung
+    antara satu halaman dengan halaman lainnya, baik dalam satu website maupun
+    ke website lain di internet.
+  </p>
+  <p>
+    Dengan hyperlink, pengguna dapat berpindah halaman hanya dengan satu klik.
+    Hyperlink merupakan komponen utama yang membuat World Wide Web saling terhubung.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>2. Tag Anchor (&lt;a&gt;)</h4>
+  <p>
+    Hyperlink dibuat menggunakan tag <code>&lt;a&gt;</code> (anchor).
+    Atribut utama yang digunakan adalah <code>href</code>.
+  </p>
+
+  <pre class="code-block"><code>&lt;a href="halaman.html"&gt;Klik di sini&lt;/a&gt;</code></pre>
+
+  <p>
+    Teks di antara tag <code>&lt;a&gt;</code> akan menjadi teks yang dapat diklik.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>3. Hyperlink ke Halaman Internal</h4>
+  <p>
+    Hyperlink internal digunakan untuk menghubungkan halaman dalam satu website.
+  </p>
+
+  <pre class="code-block"><code>&lt;a href="materi.html"&gt;Lihat Materi&lt;/a&gt;</code></pre>
+
+  <p>
+    Link ini biasa digunakan untuk navigasi menu seperti beranda, profil, atau materi.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>4. Hyperlink ke Website Eksternal</h4>
+  <p>
+    Hyperlink eksternal mengarah ke website lain di luar website kita.
+  </p>
+
+  <pre class="code-block"><code>&lt;a href="https://www.google.com"&gt;Buka Google&lt;/a&gt;</code></pre>
+
+  <p>
+    Agar link terbuka di tab baru, gunakan atribut <code>target="_blank"</code>.
+  </p>
+
+  <pre class="code-block"><code>&lt;a href="https://www.google.com" target="_blank"&gt;Buka Google&lt;/a&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>5. Hyperlink ke Bagian Tertentu (Anchor Link)</h4>
+  <p>
+    Hyperlink juga dapat digunakan untuk menuju bagian tertentu dalam satu halaman
+    menggunakan id.
+  </p>
+
+  <pre class="code-block"><code>&lt;a href="#tentang"&gt;Ke Bagian Tentang&lt;/a&gt;
+
+&lt;h2 id="tentang"&gt;Tentang Website&lt;/h2&gt;</code></pre>
+
+  <p>
+    Teknik ini sering digunakan untuk navigasi cepat pada halaman yang panjang.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>6. Hyperlink pada Gambar</h4>
+  <p>
+    Selain teks, hyperlink juga dapat diterapkan pada gambar.
+  </p>
+
+  <pre class="code-block"><code>&lt;a href="index.html"&gt;
+  &lt;img src="logo.png" alt="Logo"&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>7. Praktik Sederhana</h4>
+  <p>
+    Buatlah sebuah halaman HTML yang memiliki:
+  </p>
+  <ol>
+    <li>Link menuju halaman utama</li>
+    <li>Link menuju website eksternal</li>
+    <li>Link menuju bagian tertentu dalam halaman</li>
+  </ol>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Catatan Penting</h3>
+  <p>
+    Hyperlink adalah elemen inti dalam navigasi website.
+    Tanpa hyperlink, halaman web tidak akan saling terhubung dan sulit diakses.
+  </p>
+</div>
+`,
+
+6: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Memahami pengertian list dalam HTML.</li>
+    <li>Menggunakan unordered list (bullet).</li>
+    <li>Menggunakan ordered list (numbering).</li>
+    <li>Menggunakan description list.</li>
+    <li>Mengombinasikan list untuk menyusun informasi terstruktur.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Pengertian List dalam HTML</h4>
+  <p>
+    List dalam HTML digunakan untuk menampilkan informasi dalam bentuk daftar
+    yang tersusun rapi dan mudah dibaca. Penggunaan list sangat umum dalam
+    pembuatan menu navigasi, daftar fitur, langkah-langkah prosedur, dan konten
+    terstruktur lainnya.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>2. Unordered List (Bullet)</h4>
+  <p>
+    Unordered list digunakan untuk menampilkan daftar tanpa urutan tertentu.
+    Biasanya ditampilkan menggunakan simbol bullet.
+  </p>
+
+  <pre class="code-block"><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  <p>
+    Secara default, browser akan menampilkan bullet berbentuk lingkaran atau titik.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>3. Ordered List (Numbering)</h4>
+  <p>
+    Ordered list digunakan untuk menampilkan daftar yang memiliki urutan tertentu,
+    seperti langkah kerja atau instruksi.
+  </p>
+
+  <pre class="code-block"><code>&lt;ol&gt;
+  &lt;li&gt;Buka text editor&lt;/li&gt;
+  &lt;li&gt;Tulis kode HTML&lt;/li&gt;
+  &lt;li&gt;Simpan file&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+  <p>
+    Secara default, penomoran menggunakan angka, namun dapat diubah
+    menjadi huruf atau angka romawi.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>4. Atribut Type pada Ordered List</h4>
+  <p>
+    HTML menyediakan atribut <code>type</code> untuk mengubah bentuk penomoran.
+  </p>
+
+  <pre class="code-block"><code>&lt;ol type="A"&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+  <p>
+    Beberapa nilai type yang dapat digunakan:
+  </p>
+  <ul>
+    <li><strong>1</strong> → Angka (default)</li>
+    <li><strong>A</strong> → Huruf kapital</li>
+    <li><strong>a</strong> → Huruf kecil</li>
+    <li><strong>I</strong> → Angka romawi kapital</li>
+    <li><strong>i</strong> → Angka romawi kecil</li>
+  </ul>
+</div>
+
+<div class="content-block">
+  <h4>5. Description List</h4>
+  <p>
+    Description list digunakan untuk menampilkan daftar istilah beserta
+    penjelasannya. Tag yang digunakan adalah <code>&lt;dl&gt;</code>,
+    <code>&lt;dt&gt;</code>, dan <code>&lt;dd&gt;</code>.
+  </p>
+
+  <pre class="code-block"><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Bahasa markup untuk membuat halaman web&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Bahasa untuk mengatur tampilan web&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>6. List Bersarang (Nested List)</h4>
+  <p>
+    HTML memungkinkan pembuatan list di dalam list untuk menyusun
+    struktur informasi yang lebih kompleks.
+  </p>
+
+  <pre class="code-block"><code>&lt;ul&gt;
+  &lt;li&gt;Frontend
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Backend&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>7. Penerapan List dalam Website</h4>
+  <p>
+    List banyak digunakan dalam website modern, antara lain:
+  </p>
+  <ul>
+    <li>Menu navigasi</li>
+    <li>Daftar fitur aplikasi</li>
+    <li>Langkah-langkah tutorial</li>
+    <li>Konten dokumentasi</li>
+  </ul>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Catatan Penting</h3>
+  <p>
+    Penggunaan list yang tepat akan membuat konten web lebih terstruktur,
+    mudah dibaca, dan profesional. List juga sangat mudah dikombinasikan
+    dengan CSS untuk menghasilkan tampilan modern.
+  </p>
+</div>
+`,
+
+7: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Memahami fungsi dan kegunaan tabel dalam HTML.</li>
+    <li>Mengenal struktur dasar tabel HTML.</li>
+    <li>Menggunakan tag tabel seperti table, tr, th, dan td.</li>
+    <li>Mengatur baris dan kolom pada tabel.</li>
+    <li>Membuat tabel data sederhana untuk halaman web.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Pengertian Tabel HTML</h4>
+  <p>
+    Tabel dalam HTML digunakan untuk menampilkan data dalam bentuk baris dan kolom.
+    Tabel sangat berguna untuk menyajikan informasi yang bersifat terstruktur,
+    seperti data mahasiswa, jadwal kuliah, laporan nilai, dan informasi tabular lainnya.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>2. Struktur Dasar Tabel HTML</h4>
+  <p>
+    Tabel HTML dibangun menggunakan beberapa tag utama, yaitu:
+  </p>
+  <ul>
+    <li><code>&lt;table&gt;</code> → mendefinisikan tabel</li>
+    <li><code>&lt;tr&gt;</code> → mendefinisikan baris tabel</li>
+    <li><code>&lt;th&gt;</code> → mendefinisikan header kolom</li>
+    <li><code>&lt;td&gt;</code> → mendefinisikan data sel</li>
+  </ul>
+
+  <pre class="code-block"><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nama&lt;/th&gt;
+    &lt;th&gt;NIM&lt;/th&gt;
+    &lt;th&gt;Jurusan&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Andi&lt;/td&gt;
+    &lt;td&gt;231011001&lt;/td&gt;
+    &lt;td&gt;Teknik Informatika&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>3. Atribut Border dan Tampilan Dasar</h4>
+  <p>
+    Untuk mempermudah visualisasi tabel, dapat ditambahkan atribut <code>border</code>.
+    Namun, pada pengembangan modern, pengaturan tampilan tabel biasanya
+    dilakukan menggunakan CSS.
+  </p>
+
+  <pre class="code-block"><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Mata Kuliah&lt;/th&gt;
+    &lt;th&gt;SKS&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Pemrograman Web&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>4. Penggabungan Baris dan Kolom</h4>
+  <p>
+    HTML menyediakan atribut <code>rowspan</code> dan <code>colspan</code>
+    untuk menggabungkan baris atau kolom pada tabel.
+  </p>
+
+  <pre class="code-block"><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Hari&lt;/th&gt;
+    &lt;th colspan="2"&gt;Jadwal&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Senin&lt;/td&gt;
+    &lt;td&gt;08.00 - 10.00&lt;/td&gt;
+    &lt;td&gt;Pemrograman Web&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;10.00 - 12.00&lt;/td&gt;
+    &lt;td&gt;Basis Data&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>5. Bagian Tabel: thead, tbody, dan tfoot</h4>
+  <p>
+    Untuk struktur tabel yang lebih rapi dan terorganisir,
+    HTML menyediakan tag <code>&lt;thead&gt;</code>,
+    <code>&lt;tbody&gt;</code>, dan <code>&lt;tfoot&gt;</code>.
+  </p>
+
+  <pre class="code-block"><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nama&lt;/th&gt;
+      &lt;th&gt;Nilai&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Budi&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Rata-rata&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>6. Penerapan Tabel dalam Website</h4>
+  <p>
+    Tabel sering digunakan dalam berbagai kebutuhan website, seperti:
+  </p>
+  <ul>
+    <li>Data mahasiswa dan dosen</li>
+    <li>Jadwal perkuliahan</li>
+    <li>Laporan keuangan</li>
+    <li>Rekap nilai</li>
+  </ul>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Catatan Penting</h3>
+  <p>
+    Tabel sebaiknya digunakan hanya untuk menyajikan data,
+    bukan untuk mengatur layout halaman web. Untuk layout,
+    disarankan menggunakan CSS seperti Flexbox atau Grid.
+  </p>
+</div>
+`,
+
+8: `
+<div class="content-block">
+  <h3>A. Tujuan Pembelajaran</h3>
+  <p>Setelah mengikuti pertemuan ini, mahasiswa diharapkan mampu:</p>
+  <ol>
+    <li>Memahami fungsi dan kegunaan form dalam website.</li>
+    <li>Mengenal struktur dan elemen form HTML.</li>
+    <li>Menggunakan berbagai jenis input pada form.</li>
+    <li>Membuat form interaksi pengguna sederhana.</li>
+    <li>Menerapkan form sebagai dasar website dinamis.</li>
+  </ol>
+</div>
+
+<div class="content-block">
+  <h3>B. Uraian Materi</h3>
+
+  <h4>1. Pengertian Form HTML</h4>
+  <p>
+    Form HTML adalah elemen yang digunakan untuk menerima input atau data dari pengguna.
+    Data yang dimasukkan melalui form dapat diproses lebih lanjut oleh server
+    menggunakan bahasa pemrograman seperti PHP, Python, atau JavaScript.
+  </p>
+  <p>
+    Form merupakan komponen penting dalam website interaktif,
+    seperti halaman login, pendaftaran, komentar, dan pemesanan online.
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>2. Struktur Dasar Form HTML</h4>
+  <p>
+    Form dibuat menggunakan tag <code>&lt;form&gt;</code> yang memiliki
+    atribut <code>action</code> dan <code>method</code>.
+  </p>
+
+  <pre class="code-block"><code>&lt;form action="proses.php" method="post"&gt;
+  &lt;input type="text" name="nama"&gt;
+  &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;</code></pre>
+
+  <p>
+    Atribut <code>action</code> menentukan tujuan pengiriman data,
+    sedangkan <code>method</code> menentukan cara pengiriman data
+    (GET atau POST).
+  </p>
+</div>
+
+<div class="content-block">
+  <h4>3. Elemen Input pada Form</h4>
+  <p>
+    HTML menyediakan berbagai jenis input untuk kebutuhan form:
+  </p>
+  <ul>
+    <li><code>text</code> → input teks</li>
+    <li><code>password</code> → input sandi</li>
+    <li><code>email</code> → input alamat email</li>
+    <li><code>number</code> → input angka</li>
+    <li><code>radio</code> → pilihan tunggal</li>
+    <li><code>checkbox</code> → pilihan jamak</li>
+    <li><code>date</code> → input tanggal</li>
+    <li><code>submit</code> → tombol kirim</li>
+  </ul>
+</div>
+
+<div class="content-block">
+  <h4>4. Contoh Form Pendaftaran</h4>
+
+  <pre class="code-block"><code>&lt;form action="#" method="post"&gt;
+  &lt;label&gt;Nama Lengkap:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" name="nama"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Email:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Jenis Kelamin:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" name="jk" value="L"&gt; Laki-laki
+  &lt;input type="radio" name="jk" value="P"&gt; Perempuan&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Hobi:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox"&gt; Membaca
+  &lt;input type="checkbox"&gt; Olahraga
+  &lt;input type="checkbox"&gt; Musik&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Daftar"&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>5. Elemen Tambahan pada Form</h4>
+  <p>
+    Selain input, terdapat elemen lain yang sering digunakan:
+  </p>
+  <ul>
+    <li><code>&lt;textarea&gt;</code> → input teks panjang</li>
+    <li><code>&lt;select&gt;</code> → dropdown pilihan</li>
+    <li><code>&lt;option&gt;</code> → item pilihan dropdown</li>
+    <li><code>&lt;button&gt;</code> → tombol aksi</li>
+  </ul>
+
+  <pre class="code-block"><code>&lt;textarea rows="4"&gt;&lt;/textarea&gt;
+
+&lt;select&gt;
+  &lt;option&gt;Teknik Informatika&lt;/option&gt;
+  &lt;option&gt;Sistem Informasi&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>6. Validasi Form Dasar</h4>
+  <p>
+    HTML menyediakan validasi bawaan untuk meningkatkan kualitas data:
+  </p>
+  <ul>
+    <li><code>required</code> → input wajib diisi</li>
+    <li><code>maxlength</code> → batas karakter</li>
+    <li><code>pattern</code> → format input tertentu</li>
+  </ul>
+
+  <pre class="code-block"><code>&lt;input type="email" required&gt;
+&lt;input type="text" maxlength="10"&gt;</code></pre>
+</div>
+
+<div class="content-block">
+  <h4>7. Peran Form dalam Website Dinamis</h4>
+  <p>
+    Form merupakan penghubung antara pengguna dan server.
+    Data yang dikirimkan melalui form dapat disimpan ke database,
+    diproses, atau ditampilkan kembali ke pengguna.
+  </p>
+</div>
+
+<div class="content-block highlight">
+  <h3>C. Catatan Penting</h3>
+  <p>
+    Form HTML adalah dasar sebelum mempelajari pemrograman web dinamis.
+    Penguasaan form sangat penting untuk membuat aplikasi web seperti
+    sistem login, registrasi, dan pengolahan data.
+  </p>
+</div>
+`
+};
+
+const judul = {
+1:"Pertemuan 1 – Pengenalan Web",
+2:"Pertemuan 2 – Basic Tag HTML",
+3:"Pertemuan 3 – Format Teks & Karakter Khusus",
+4:"Pertemuan 4 – Multimedia",
+5:"Pertemuan 5 – Hyperlink",
+6:"Pertemuan 6 – List",
+7:"Pertemuan 7 – Tabel",
+8:"Pertemuan 8 – Form"
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+document.getElementById("judul").innerText = judul[id];
+document.getElementById("kontenMateri").innerHTML = materi[id];
+
+function toggleMenu(){
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

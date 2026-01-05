@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pemrograman Web 1 | Materi Perkuliahan</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+<header class="navbar">
+  <div class="logo">
+    <img src="assets/css/img/logo.png" alt="Logo UNPAM">
+    <span>UNIVERSITAS PAMULANG</span>
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="#hero">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#preview">Preview</a>
+    <a href="#informasi">Informasi</a>
+  </nav>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Pemrograman Web 1</h1>
+    <p class="hero-desc">
+      Media Pembelajaran Berbasis Website Statis untuk memahami
+      dasar pengembangan web modern menggunakan HTML, CSS, dan JavaScript.
+    </p>
+
+    <div class="hero-meta">
+    </div>
+
+    <a href="materi.html" class="btn">Lihat Materi Perkuliahan</a>
+  </div>
+
+</section>
+
+<section class="info" id="tentang">
+  <div class="hero-content">
+    <h3>Tentang Mata Kuliah</h3>
+    <p>
+      Mata kuliah ini dirancang untuk membekali mahasiswa dengan kemampuan memahami struktur dan cara kerja website statis
+      menggunakan HTML sebagai kerangka utama, CSS untuk pengaturan tampilan dan layout, serta JavaScript untuk menambahkan
+      interaksi dasar pada halaman web.
+    </p>
+
+    <p>
+      Melalui pembelajaran berbasis praktik dan studi kasus sederhana, mahasiswa diharapkan mampu membangun website yang
+      terstruktur, responsif, dan mudah dipahami, serta memiliki pemahaman awal yang kuat sebelum melanjutkan ke pengembangan
+      web dinamis pada mata kuliah lanjutan.
+    </p>
+  </div>
+
+</section>
+
+<section class="preview" id="preview">
+  <div class="hero-content">
+  <h3>Ruang Lingkup Pembelajaran</h3>
+
+  <div class="preview-grid">
+    <div class="preview-card">HTML Dasar & Struktur</div>
+    <div class="preview-card">CSS Layout & Responsive</div>
+    <div class="preview-card">Form & Tabel</div>
+    <div class="preview-card">JavaScript Dasar</div>
+  </div>
+
+  </div>
+</section>
+
+
+<section class="info" id="informasi">
+  <div class="hero-content">
+  <h3>Informasi Mahasiswa</h3>
+
+  <div class="info-card">
+    <p><strong>Nama Mahasiswa</strong> : Yandi Yulyan</p>
+    <p><strong>NIM</strong> : 231011400500</p>
+    <p><strong>Program Studi</strong> : Teknik Informatika</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-address">
+      Jl. Surya Kencana No. 1, Pamulang Barat, Pamulang<br>
+      Tangerang Selatan, Banten, Indonesia
+    </p>
+    <p class="footer-copy">
+      © 2026 – Pemrograman Web 1
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+
+<script>
+const navLinks = document.querySelectorAll(".nav-menu a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    navLinks.forEach(item => item.classList.remove("active"));
+
+    this.classList.add("active");
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Materi | Pemrograman Web 1</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="assets/css/img/logo.png" alt="Logo UNPAM">
+    <span>UNIVERSITAS PAMULANG</span>
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html#hero">Beranda</a>
+    <a href="index.html#tentang">Tentang</a>
+    <a href="index.html#preview">Preview</a>
+    <a href="index.html#informasi">Informasi</a>
+  </nav>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+<section class="materi-list">
+  <h2>Daftar Materi Perkuliahan</h2>
+
+  <div class="card"><h3>Pertemuan 1</h3><p>Pengenalan Web</p><a href="detail.html?id=1">Lihat Materi</a></div>
+  <div class="card"><h3>Pertemuan 2</h3><p>Basic Tag HTML</p><a href="detail.html?id=2">Lihat Materi</a></div>
+  <div class="card"><h3>Pertemuan 3</h3><p>Format Teks & Karakter Khusus</p><a href="detail.html?id=3">Lihat Materi</a></div>
+  <div class="card"><h3>Pertemuan 4</h3><p>Gambar, Audio & Video</p><a href="detail.html?id=4">Lihat Materi</a></div>
+  <div class="card"><h3>Pertemuan 5</h3><p>Hyperlink</p><a href="detail.html?id=5">Lihat Materi</a></div>
+  <div class="card"><h3>Pertemuan 6</h3><p>List & Bullet Numbering</p><a href="detail.html?id=6">Lihat Materi</a></div>
+  <div class="card"><h3>Pertemuan 7</h3><p>Tabel</p><a href="detail.html?id=7">Lihat Materi</a></div>
+  <div class="card"><h3>Pertemuan 8</h3><p>Form HTML</p><a href="detail.html?id=8">Lihat Materi</a></div>
+</section>
+
+<script>
+function toggleMenu(){
+  document.getElementById('navMenu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
